@@ -7,15 +7,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Stack;
+import java.util.TreeSet;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
-
-
-
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 
@@ -30,11 +29,14 @@ public class SourceCode {
 		sc.hashMap.put(null, null); //HashMap支持null
 		String aString = "sdf";
 		StringBuffer sBuffer = new StringBuffer();
+		ConcurrentHashMap<Integer, Integer> concurrentHashMap = new ConcurrentHashMap<>();
 		SoftReference<Integer> sReference = new SoftReference<Integer>(1);
 		ThreadLocal<Integer> tLocal = new ThreadLocal<Integer>();
 		ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 1000, TimeUnit.DAYS, null);
 		AtomicInteger atomicInteger = new AtomicInteger(3);
 		HashSet<Integer> aHashSet = new HashSet<>();
+		TreeSet<Integer> treeSet = new TreeSet<>();
+		
 	}
 	
 }
